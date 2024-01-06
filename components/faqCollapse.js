@@ -8,7 +8,7 @@ const FaqCollapse = ({ title, content }) => {
     <>
       <div>
         <div className='bg-white md:w-[840px] flex justify-between items-center cursor-pointer mx-auto px-[16px] py-[10px] rounded-[6px]' onClick={() => setOpen(!open)}>
-          <p className='text-[24px] font-semibold capitalize text-black-light'>{title}</p>
+          <p className='text-[16px] md:text-[24px] font-semibold capitalize text-black-light'>{title}</p>
           <span className='icon-up active rounded-2xl w-[46px] h-[46px] flex justify-center items-center shrink-0'>
             {!open && (
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">

@@ -13,8 +13,8 @@ const Footer = ({ specailities }) => {
           <Image src={Wave4} alt="" class="w-full " />
         <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto w-full">
             <div class="w-full">
-                <div class="py-10 text-center md:text-left border-b-[1px] border-pink-light">
-                    <div class="flex flex-col md:flex-row justify-between md:grid-cols-2 lg:grid-cols-4">
+                <div class="pl-[64px] py-10 text-left md:text-center md:text-left border-b-[1px] border-pink-light">
+                    <div class="flex flex-col md:flex-row justify-between md:grid-cols-2 lg:grid-cols-4 gap-y-[77px]">
                         <div class="">
                             <Image src={LogoIcon} alt="footer logo" />
                             <p className="my-[30px] text-[16px] leading-[32px] text-brown-main capitalize">
@@ -52,7 +52,7 @@ const Footer = ({ specailities }) => {
                         </div>
                         <div class="">
                             <h6
-                            class="mb-4 flex justify-center font-semibold text-[24px] text-black-light md:justify-start">
+                            class="mb-4 flex font-semibold text-[24px] text-black-light md:justify-start">
                             {t("services")}
                             </h6>
                             <p class="mb-4">
@@ -73,7 +73,7 @@ const Footer = ({ specailities }) => {
                         </div>
                         <div class="">
                             <h6
-                            class="mb-4 flex justify-center font-semibold text-[24px] text-black-light md:justify-start">
+                            class="mb-4 flex font-semibold text-[24px] text-black-light md:justify-start">
                             {t("useful_links")}
                             </h6>
                             <p class="mb-4">
@@ -94,10 +94,10 @@ const Footer = ({ specailities }) => {
                         </div>
                         <div>
                             <h6
-                            class="mb-4 flex justify-center font-semibold text-[24px] text-black-light md:justify-start">
+                            class="mb-4 flex font-semibold text-[24px] text-black-light md:justify-start">
                             {t("contact")}
                             </h6>
-                            <p class="mb-4 flex items-center justify-center md:justify-start">
+                            <p class="mb-4 flex items-center md:justify-start text-brown-main">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
@@ -111,7 +111,7 @@ const Footer = ({ specailities }) => {
                             contact@iclamyou.com
                             </p>
                             
-                            <p class="mb-4 flex items-center justify-center md:justify-start">
+                            <p class="mb-4 flex items-center md:justify-start text-brown-main">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="#FC6EAC"
@@ -126,7 +126,7 @@ const Footer = ({ specailities }) => {
                             2578 Broadway #607New York, NY 10025
                             </p>
                               
-                            <p class="flex items-center justify-center md:justify-start">
+                            <p class="flex items-center md:justify-start text-brown-main">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"

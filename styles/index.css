@@ -116,8 +116,6 @@ a {
 .therapy-card {
   border-radius: 0px 60px;
   box-shadow: 0px 10px 32px -4px rgba(24, 39, 75, 0.10), 0px 6px 14px -6px rgba(100, 85, 78, 0.53);
-  margin-top: -170px;
-  margin-bottom: 120px;
 }
 
 .progress-ring__circle {
