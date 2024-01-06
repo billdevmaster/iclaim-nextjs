@@ -1,8 +1,11 @@
 /* eslint-disable prettier/prettier */
 import LogoIcon from "@/images/Logo.png"
+import { useTranslation } from "next-i18next"
 import Image from "next/image"
 
 const Footer = ({ specailities }) => {
+    const { t } = useTranslation('common')
+
   return (
     <footer class="flex justify-center bg-blue-light">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto w-full">
@@ -47,49 +50,49 @@ const Footer = ({ specailities }) => {
                         <div class="">
                             <h6
                             class="mb-4 flex justify-center font-semibold text-[24px] text-black-light md:justify-start">
-                            Services
+                            {t("services")}
                             </h6>
                             <p class="mb-4">
-                                <a href="#!" class="text-brown-main text-[16px]">Online Theray</a>
+                                  <a href="#!" class="text-brown-main text-[16px]">{t("online_therapy")}</a>
                             </p>
                             <p class="mb-4">
-                                <a href="#!" class="text-brown-main text-[16px]">Couples Therapy</a>
+                                <a href="#!" class="text-brown-main text-[16px]">{t("couples_therapy")}</a>
                             </p>
                             <p class="mb-4">
-                                <a href="#!" class="text-brown-main text-[16px]">Psychiatry</a>
+                                <a href="#!" class="text-brown-main text-[16px]">{t("psychiatry")}</a>
                             </p>
                             <p class="mb-4">
-                                <a href="#!" class="text-brown-main text-[16px]">Teen Therapy</a>
+                                <a href="#!" class="text-brown-main text-[16px]">{t("teen_therapy")}</a>
                             </p>
                             <p class="mb-4">
-                                <a href="#!" class="text-brown-main text-[16px]">iClamyou For Business</a>
+                                <a href="#!" class="text-brown-main text-[16px]">{t("iclamyou_for_business")}</a>
                             </p>
                         </div>
                         <div class="">
                             <h6
                             class="mb-4 flex justify-center font-semibold text-[24px] text-black-light md:justify-start">
-                            Useful links
+                            {t("useful_links")}
                             </h6>
                             <p class="mb-4">
-                                <a href="#!" class="text-brown-main text-[16px]">Find A Therapist</a>
+                                <a href="#!" class="text-brown-main text-[16px]">{t("find_a_therapist")}</a>
                             </p>
                             <p class="mb-4">
-                                <a href="#!" class="text-brown-main text-[16px]">Mental Health Library</a>
+                                <a href="#!" class="text-brown-main text-[16px]">{t("mental_health_library")}</a>
                             </p>
                             <p class="mb-4">
-                                <a href="#!" class="text-brown-main text-[16px]">Free Mental Health Tests</a>
+                                <a href="#!" class="text-brown-main text-[16px]">{t("free_mental_health_tests")}</a>
                             </p>
                             <p class="mb-4">
-                                <a href="#!" class="text-brown-main text-[16px]">Anxiety Test</a>
+                                <a href="#!" class="text-brown-main text-[16px]">{t("anxiety_test")}</a>
                             </p>
                             <p class="mb-4">
-                                <a href="#!" class="text-brown-main text-[16px]">Depression Test</a>
+                                <a href="#!" class="text-brown-main text-[16px]">{t("depression_test")}</a>
                             </p>
                         </div>
                         <div>
                             <h6
                             class="mb-4 flex justify-center font-semibold text-[24px] text-black-light md:justify-start">
-                            Contact
+                            {t("contact")}
                             </h6>
                             <p class="mb-4 flex items-center justify-center md:justify-start">
                             <svg
@@ -138,7 +141,7 @@ const Footer = ({ specailities }) => {
                 </div>
 
                 <div class="p-6 text-center">
-                    <span class="text-[14px] text-brown-main uppercase">Copyright © 2023 iclamyou. All Rights Reserved.</span>
+                    <span class="text-[14px] text-brown-main uppercase">{t("copyright")}</span>
                 </div>
             </div>
         </div>

@@ -1,8 +1,14 @@
 /* eslint-disable prettier/prettier */
 import LogoIcon from "@/images/Logo.png"
+import { useTranslation } from "next-i18next"
 import Image from "next/image"
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Header = () => {
+  const { t } = useTranslation('common')
+  const router = useRouter()
+
   return (
     <nav className="bg-pink-100">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4 py-8 relative">
@@ -18,19 +24,19 @@ const Header = () => {
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:mt-0 md:border-0">
             <li className="px-6 border-r-[1px] border-gray-light">
-              <a href="#" className="block text-[20px] leading-none text-white rounded md:bg-transparent md:text-pink-main md:p-0" aria-current="page">Home</a>
+              <a href="#" className="block text-[20px] leading-none text-white rounded md:bg-transparent md:text-pink-main md:p-0" aria-current="page">{t("home")}</a>
             </li>
             <li className="px-6 border-r-[1px] border-gray-light">
-              <a href="#" className="block text-[20px] leading-none text-gray-main rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-main md:p-0">Our Therapy</a>
+              <a href="#" className="block text-[20px] leading-none text-gray-main rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-main md:p-0">{t("our_therapy")}</a>
             </li>
             <li className="px-6 border-r-[1px] border-gray-light">
-              <a href="#" className="block text-[20px] leading-none text-gray-main rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-main md:p-0">About Us</a>
+              <a href="#" className="block text-[20px] leading-none text-gray-main rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-main md:p-0">{t("about_us")}</a>
             </li>
             <li className="px-6 border-r-[1px] border-gray-light">
-              <a href="#" className="block text-[20px] leading-none text-gray-main rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-main md:p-0">Login</a>
+              <a href="#" className="block text-[20px] leading-none text-gray-main rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-main md:p-0">{t("login")}</a>
             </li>
             <li className="px-6">
-              <a href="#" className="block text-[20px] leading-none text-gray-main rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-main md:p-0">العربية</a>
+              <Link href="#" className="block text-[20px] leading-none text-gray-main rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-main md:p-0" locale={`${router.locale === "en" ? 'ar' : "en"}`}>{router.locale === "en" ? 'العربية' : "en"}</Link>
             </li>
           </ul>
         </div>
