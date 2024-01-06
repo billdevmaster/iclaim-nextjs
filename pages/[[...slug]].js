@@ -20,6 +20,17 @@ import TherapyImg1 from "@/images/therapy-1.png"
 import TherapyImg2 from "@/images/therapy-2.png"
 import TherapyImg3 from "@/images/therapy-3.png"
 import HowItWorks from "@/images/how-it-works.png"
+import Leaf1 from "@/images/leaf1.png"
+import Leaf2 from "@/images/leaf2.png"
+import Corner1 from "@/images/corner1.png"
+import Corner2 from "@/images/corner2.png"
+import HeroBottom from "@/images/home_hero_bottom.png"
+import AboutUsBottom from "@/images/home_aboutus_bottom.png"
+import OurTherapyBottom from "@/images/home_ourtherapy_bottom.png"
+import OffersBottom from "@/images/home_offers_bottom.png"
+import Wave2 from "@/images/wave2.png"
+import Wave3 from "@/images/wave3.png"
+
 import SectionTitle from "@/components/SectionTitle"
 import SectionBigTitle from "@/components/SectionBigTitle"
 import FaqCollapse from "@/components/faqCollapse";
@@ -47,16 +58,22 @@ const Home = () => {
   const { t } = useTranslation()
   return (
     <>
-      <section class="text-[24px]">
-        <div class="bg-pink-semilight md:pb-[218px]">
-          <div class="pt-[114px] px-4 mx-auto max-w-screen-xl text-center">
-            <div class="flex justify-center gap-[80px] mb-[45px]">
-              <span class="text-[24px] text-black-light">{t("anywhere")}</span>
-              <span class="text-[24px] text-black-light">{t("anytime")}</span>
-              <span class="text-[24px] text-black-light">{t("confidential")}</span>
+      <section class="relative">
+        
+        <div class="bg-pink-semilight md:pb-[218px] relative">
+          <Image src={Leaf1} alt="" class="absolute top-2 left-0 z-10" />
+          <Image src={Leaf2} alt="" class="absolute bottom-[240px] right-0 z-10" />
+          <Image src={Corner1} alt="" class="absolute top-0 left-0 z-1" />
+          <Image src={Corner2} alt="" class="absolute bottom-0 right-0 z-1" />
+
+          <div class="pt-[114px] pb-[222px] md:pb-0 mx-auto max-w-screen-xl text-center">
+            <div class="flex justify-center gap-[30px] md:gap-[80px] mb-[34px] md:mb-[45px]">
+              <span class="text-[20px] md:text-[24px] text-black-light">{t("anywhere")}</span>
+              <span class="text-[20px] md:text-[24px] text-black-light">{t("anytime")}</span>
+              <span class="text-[20px] md:text-[24px] text-black-light">{t("confidential")}</span>
             </div>
 
-            <h1 class="mb-[50px] text-[80px] mx-auto text-white font-extrabold tracking-tight leading-none font-soleSerifHeadlineBold capitalize">
+            <h1 class="mb-[50px] text-[48px] md:text-[80px] mx-auto text-white font-extrabold tracking-tight leading-none font-soleSerifHeadlineBold capitalize">
               {t("home_hero_text1")}<br/>{t("home_hero_text2")}
             </h1>
             
@@ -67,12 +84,12 @@ const Home = () => {
               </div>
             </div>
 
-            <p class="font-soleSerifHeadlineBold md:text-[32px] text-semilight">{t("home_therapy_quest")}</p>
+            <p class="font-soleSerifHeadlineBold text-[24px] md:text-[32px] text-semilight">{t("home_therapy_quest")}</p>
           </div>
         </div>
-        <div class="hero-bottom-bg">
-          <div class="mx-auto max-w-screen-xl text-center grid grid-cols-3 gap-[56px]">
-            <div class="pt-[18px] text-center therapy-card bg-blue-400 md:w-[350px] mx-auto">
+        <div class="hero-bottom-bg relative">
+          <div class="mx-auto max-w-screen-xl text-center grid grid-cols-1 md:grid-cols-3 gap-y-[85px] md:gap-[56px]">
+            <div class="pt-[18px] text-center therapy-card bg-blue-400 w-[350px] mx-auto">
               <p class="text-gray-600 mb-[12px] text-[16px]">{t("therapy_for_me")}</p>
               <p class="font-soleSerifHeadlineBold text-[32px] text-black-light mb-[31px]">{t("individual")}</p>
               <a class="text-brown-dark inline-flex justify-center items-center">
@@ -84,7 +101,7 @@ const Home = () => {
               <Image src={Therapy1} alt="therapy card" class="mx-auto" />
             </div>
 
-            <div class="pt-[18px] text-center therapy-card bg-pink-400 md:w-[350px] mx-auto">
+            <div class="pt-[18px] text-center therapy-card bg-pink-400 w-[350px] mx-auto">
               <p class="text-gray-600 mb-[12px] text-[16px]">{t("therapy_for_us")}</p>
               <p class="font-soleSerifHeadlineBold text-[32px] text-black-light mb-[31px]">{t("couples")}</p> 
               <a class="text-brown-dark inline-flex justify-center items-center">
@@ -96,7 +113,7 @@ const Home = () => {
               <Image src={Therapy2} alt="therapy card" class="mx-auto" />
             </div>
 
-            <div class="pt-[18px] text-center therapy-card bg-yellow-400 md:w-[350px] mx-auto">
+            <div class="pt-[18px] text-center therapy-card bg-yellow-400 w-[350px] mx-auto">
               <p class="text-gray-600 mb-[12px] text-[16px]">{t("for_my_child")}</p>
               <p class="font-soleSerifHeadlineBold text-[32px] text-black-light mb-[31px]">{t("teen")}</p>
               <a class="text-brown-dark inline-flex justify-center items-center">
@@ -109,14 +126,15 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <Image src={HeroBottom} alt="" class="w-full " />
       </section>
       
-      <section class="about-us md:py-[100px] bg-blue-light">
-        <div class="mx-auto max-w-screen-xl">
+      <section class="about-us bg-blue-light">
+        <div class="mx-auto max-w-screen-xl px-2 md:py-[90px]">
           <SectionTitle title={t("about_us")} />
-          <div class="flex md:justify-between md:gap-[70px]">
+          <div class="flex flex-col md:flex-row md:justify-between md:gap-[70px]">
             <div class="w-full">
-              <p class="font-soleSerifHeadlineBold text-[40px] text-black-main md:mb-[60px] font-bold leading-none">{t("home_about_us_title")}</p>
+              <p class="font-soleSerifHeadlineBold text-[30px] md:text-[40px] text-black-main md:mb-[60px] font-bold leading-none capitalize">{t("home_about_us_title")}</p>
               <p class="font-poppinsRegular text-[20px] text-brown-main">
               {t("home_about_us_1")} <br/><br/>
 
@@ -125,21 +143,21 @@ const Home = () => {
               {t("home_about_us_3")}
               </p>
               <div class="md:my-[50px] flex">
-                <div class="flex items-center text-brown-main text-[20px] font-bold mr-[30px]">
-                  <span class="display rounded-full p-[10px] bg-blue-500 mr-2">
-                    <Image src={IconDoc} alt="about us"/>
+                <div class="flex items-center text-brown-main text-[16px] md:text-[20px] font-bold mr-[18px] md:mr-[30px]">
+                  <span class="display rounded-full w-[20px] h-[20px] md:w-[34px] md:h-[34px] flex justify-center items-center bg-blue-500 mr-2">
+                    <Image src={IconDoc} alt="about us" class="w-[15px] h-[15px] md:w-[24px] md:h-[24px]"/>
                   </span>
                   {t("licensed")}
                 </div>
-                <div class="flex items-center text-brown-main text-[20px] font-bold mr-[30px]">
-                  <span class="display rounded-full p-[10px] bg-pink-500 mr-2">
-                    <Image src={IconCalc} alt="about us"/>
+                <div class="flex items-center text-brown-main text-[16px] md:text-[20px] font-bold mr-[18px] md:mr-[30px]">
+                  <span class="display rounded-full w-[20px] h-[20px] md:w-[34px] md:h-[34px] flex justify-center items-center bg-pink-500 mr-2">
+                    <Image src={IconCalc} alt="about us" class="w-[15px] h-[15px] md:w-[24px] md:h-[24px]"/>
                   </span>
                   {t("available")}
                 </div>
-                <div class="flex items-center text-brown-main text-[20px] font-bold mr-[30px]">
-                  <span class="display rounded-full p-[10px] bg-yellow-500 mr-2">
-                    <Image src={IconUser} alt="about us"/>
+                <div class="flex items-center text-brown-main text-[16px] md:text-[20px] font-bold mr-[18px] md:mr-[30px]">
+                  <span class="display rounded-full w-[20px] h-[20px] md:w-[34px] md:h-[34px] flex justify-center items-center bg-yellow-500 mr-2">
+                    <Image src={IconUser} alt="about us" class="w-[15px] h-[15px] md:w-[24px] md:h-[24px]"/>
                   </span>
                   {t("personalized")}
                 </div>
@@ -153,24 +171,26 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <Image src={AboutUsBottom} alt="" class="w-full " />
       </section>
 
-      <section class="faq md:py-[90px] bg-pink-600">
-        <div class="mx-auto max-w-screen-xl text-center">
+      <section class="our-therapy bg-pink-600">
+        <div class="mx-auto max-w-screen-xl text-center md:py-[90px]">
           <SectionTitle title={t("what_our_services")} />
           <SectionBigTitle title={t("our_therapy")} />
-          <div>
+          <div class="hidden md:block">
             <TherapySlider items={therapys} />
           </div>
           <LinkPageButton text={t("find_more")} href="#" />
         </div>
+        <Image src={OurTherapyBottom} alt="" class="w-full " />
       </section>
 
-      <section class="faq md:py-[90px] bg-white">
-        <div class="mx-auto max-w-screen-xl text-center">
+      <section class="faq bg-white">
+        <div class="mx-auto max-w-screen-xl text-center md:py-[90px]">
           <SectionTitle title={t("what_we_offer")} />
           <SectionBigTitle title={t("how_it_works")} />
-          <div class="flex md:justify-between md:gap-[70px]">
+          <div class="flex flex-col md:flex-row md:justify-between md:gap-[70px]">
             <div class="w-full">
               <Image src={HowItWorks} alt="how it works" />
             </div>
@@ -182,11 +202,13 @@ const Home = () => {
             </div>
           </div>
         </div>
+        
       </section>
 
-      <section class="md:py-[90px] bg-blue-light">
-        <div class="mx-auto max-w-screen-xl text-center">
-          <div class="grid grid-cols-3">
+      <section class="bg-blue-light">
+        <Image src={OffersBottom} alt="" class="w-full " />
+        <div class="mx-auto max-w-screen-xl text-center md:py-[90px]">
+          <div class="grid grid-cols-1 md:grid-cols-3">
             <CircleProgress percent="70" content={t("home_usage_percent1")} />
             <CircleProgress percent="80" content={t("home_usage_percent2")} />
             <CircleProgress percent="98" content={t("home_usage_percent3")} />
@@ -194,11 +216,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section class="faq md:py-[90px] bg-white">
-        <div class="mx-auto max-w-screen-xl text-center">
+      <section class="faq bg-white">
+       <Image src={Wave2} alt="" class="w-full " />
+        <div class="mx-auto max-w-screen-xl text-center md:py-[90px]">
           <SectionTitle title={t("home_blog_title")} />
           <SectionBigTitle title={t("home_blog_big_title")} />
-          <div class="grid grid-cols-3">
+          <div class="grid grid-cols-1 md:grid-cols-3">
             <BlogItem image={Blog1} text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text e...." />
             <BlogItem image={Blog2} text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text e...." />
             <BlogItem image={Blog3} text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text e...." />
@@ -206,8 +229,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section class="faq md:py-[90px] bg-pink-600">
-        <div class="mx-auto max-w-screen-xl text-center">
+      <section class="faq bg-pink-600">
+        <Image src={Wave3} alt="" class="w-full " />
+        <div class="mx-auto max-w-screen-xl text-center  md:py-[90px]">
           <SectionTitle title={t("home_faq_title")} />
           <SectionBigTitle title={t("home_faq_big_title")} />
           <div class="gap-y-[24px] grid grid-cols-1">

@@ -2,16 +2,19 @@
 import LogoIcon from "@/images/Logo.png"
 import { useTranslation } from "next-i18next"
 import Image from "next/image"
+import Wave4 from "@/images/wave4.png"
 
 const Footer = ({ specailities }) => {
     const { t } = useTranslation('common')
 
-  return (
-    <footer class="flex justify-center bg-blue-light">
+    return (
+      
+      <footer class="bg-blue-light">
+          <Image src={Wave4} alt="" class="w-full " />
         <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto w-full">
             <div class="w-full">
                 <div class="py-10 text-center md:text-left border-b-[1px] border-pink-light">
-                    <div class="flex justify-between md:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex flex-col md:flex-row justify-between md:grid-cols-2 lg:grid-cols-4">
                         <div class="">
                             <Image src={LogoIcon} alt="footer logo" />
                             <p className="my-[30px] text-[16px] leading-[32px] text-brown-main capitalize">
